@@ -1,5 +1,6 @@
 {% extends 'master/base.html' %}
 {% load static %}
+{% load humanize %}
 {% block body %}
     <!-- Content Row -->
     <div class="row">
@@ -105,7 +106,7 @@
 
                                             <tr>
                                                 <td><h4>{{ product.0 }}</h4></td>
-                                                <td><h4>{{ product.1 }}</h4></td>
+                                                <td><h4>{{ product.1|floatformat:2|intcomma }}</h4></td>
                                                 <td >
                                                     <img src="{% static  product.2 %}" width="50%">
                                                 </td>

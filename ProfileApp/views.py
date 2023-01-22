@@ -25,16 +25,16 @@ def showMyData(request):
     status = "นักเรียน"
     futurecareer = "โปรแกรมเมอร์"
 
-    pd1 = ["Prime Vandal",0.00,'images/Products/PD1.jpg']
-    pd2 = ["Spectrum Phantom", 0.00,'images/Products/PD2.jpg']
-    pd3 = ["Glitchpop Bulldog", 0.00,'images/Products/PD3.jpg']
-    pd4 = ["Gltichpop Vandal", 0.00,'images/Products/PD4.jpg']
-    pd5 = ["Ruination Phantom", 0.00,'images/Products/PD5.jpg']
-    pd6 = ["Orange Ruination Vandal", 0.00,'images/Products/PD6.jpg']
-    pd7 = ["RGX Vandal", 0.00,'images/Products/PD7.jpg']
-    pd8 = ["Prime 2.0 Phantom", 0.00,'images/Products/PD8.jpg']
-    pd9 = ["ElderFlame Operator", 0.00,'images/Products/PD9.jpg']
-    pd10 = ["ElderFlame Vandal", 0.00,'images/Products/PD10.jpg']
+    pd1 = ["Prime Vandal",1775.00,'images/Products/PD1.jpg']
+    pd2 = ["Spectrum Phantom", 2675.00,'images/Products/PD2.jpg']
+    pd3 = ["Glitchpop Bulldog", 2175.00,'images/Products/PD3.jpg']
+    pd4 = ["Gltichpop Vandal", 2,175.00,'images/Products/PD4.jpg']
+    pd5 = ["Ruination Phantom", 2175.00,'images/Products/PD5.jpg']
+    pd6 = ["Orange Ruination Vandal", 4550.00,'images/Products/PD6.jpg']
+    pd7 = ["RGX Vandal", 2175.00,'images/Products/PD7.jpg']
+    pd8 = ["Prime 2.0 Phantom", 1,011.51,'images/Products/PD8.jpg']
+    pd9 = ["ElderFlame Operator", 3150.00,'images/Products/PD9.jpg']
+    pd10 = ["ElderFlame Vandal", 3150.00,'images/Products/PD10.jpg']
     myproduct = [pd1,pd2,pd3,pd4,pd5,pd6,pd7,pd8,pd9,pd10,]
     mydata = {'IdNumber': IdNumber, 'fullName': fullName, 'age': age, 'birthday': birthday, 'sex': sex,
               'bloodType': bloodType, 'like': like, 'hate': hate, 'status': status, 'futurecareer': futurecareer,
