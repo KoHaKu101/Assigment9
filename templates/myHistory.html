@@ -1,86 +1,73 @@
 {% extends 'master/base.html' %}
 {% load static %}
 {% block body %}
-        <style>
-            a:link{
-                text-decoration: none;
-            }
-        </style>
         <!-- Content Row -->
-        <div class="row">
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-12 col-md-6">
-                <div class="card mx-3 mt-3">
-                     <div class="card-header bg-primary">
-                         <div class="row">
-                             <div class="col-md-8">
-                                 <h1 class="h3 mb-0 text-white">ประวัติส่วนตัว (Personal Record)</h1>
-                             </div>
-                             <div class="col-md-4 ">
-                                 <a class="text-white btn btn-danger float-right" href="{% url 'Home'%}" >
-                                     <i class="fas fa-arrow-circle-left mx-1">
-                                     </i>
-                                     กลับหน้าหลัก
-                                </a>
-                             </div>
-                         </div>
-                        </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="{% static "images/MyHistory/myImg1.png"%}" width="100%">
-                            </div>
-                            <div class="col-md-8 text-dark">
-                                <div class="row ">
-                                    <div class="col-md-3">
-                                        <h1 class="h3 text-mouse"><span class="text-danger">ชื่อ</span> นายพิชิตชัย</h1>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h1 class="h3 text-mouse"><span class="text-danger">นามสกุล</span> ธรรมชัย</h1>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <h1 class="h3 text-mouse"><span class="text-danger">ชื่อเล่น</span> ทิว</h1>
-                                    </div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col-md-7">
-                                        <h1 class="h3 text-mouse"><span class="text-danger">วัน เดือน ปี เกิด</span> 14 กุมภาพันธ์ 2545</h1>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <h1 class="h3 text-mouse"><span class="text-danger">อายุ</span> 21 ปี</h1>
-                                    </div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col-md-12">
-                                        <h1 class="h3 text-mouse"><span class="text-danger">เพศ</span> ชาย</h1>
-                                    </div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col-md-12">
-                                        <h1 class="h3 text-mouse"><span class="text-danger">สิ่งที่ชอบ</span> 1.เขียนโปรแกรม 2.เล่นเกม 3.อ่านมังงะ</h1>
-                                    </div>
-                                </div>
-                                <div class="row my-2">
-                                    <div class="col-md-12">
-                                        <h1 class="h3 text-mouse"><span class="text-danger">สิ่งที่ไม่ชอบ</span> 1.การเดินทางไกล 2.การตื่นเช้า 3.การออกแบบให้สวยงาม</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="sidebar-divider">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a class="text-white btn btn-warning float-right" href="MyEducation" >
-                                        <span>ถัดไป</span>
-                                        <i class="fas fa-arrow-circle-right mx-1"></i>
-                                </a>
-                            </div>
-                        </div>
-
+    <style>
+    h5{
+        font-size: 1.45rem;
+    }
+    </style>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="main-profile header-text">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{% static 'images/MyHistory/myImg2.jpg'%}" width="100%" style="border-radius: 23px;">
                     </div>
-
+                    <div class="col-lg-8 align-self-center">
+                    <div class="main-info header-text text-center">
+                        <span><h5>ข้อมูลส่วนตัว</h5></span>
+                        <div class="row my-3 text-start">
+                            <div class="col-md-5">
+                                <h5 >นายพิชิตชัย &nbsp; ธรรมชัย</h5>
+                            </div>
+                            <div class="col-md-3">
+                                <h5 >ชื่อเล่น : ทิว</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 >เพศ : ชาย</h5>
+                            </div>
+                        </div>
+                        <div class="row my-3 text-start">
+                            <div class="col-md-8">
+                                <h5 >เกิดวันที่ : 14 กุมภาพันธ์ 2545</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 >อายุ : 21 ปี</h5>
+                            </div>
+                        </div>
+                        <div class="row my-3 text-start">
+                            <div class="col-md-12">
+                                <h5 >สิ่งที่ชอบ : 1.เขียนโปรแกรม &nbsp; 2.เล่นเกม &nbsp; 3.อ่านมังงะ</h5>
+                            </div>
+                        </div>
+                        <div class="row my-3 text-start">
+                            <div class="col-md-12">
+                                <h5 >สิ่งที่ไม่ชอบ : 1.การเดินทางไกล &nbsp; 2.การออกแบบให้สวยงาม</h5>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
+    </div>
+
+{#                                        <h1 class="h3 text-mouse"><span class="text-danger">เพศ</span> ชาย</h1>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="row my-2">#}
+{#                                    <div class="col-md-12">#}
+{#                                        <h1 class="h3 text-mouse"><span class="text-danger">สิ่งที่ชอบ</span> 1.เขียนโปรแกรม 2.เล่นเกม 3.อ่านมังงะ</h1>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="row my-2">#}
+{#                                    <div class="col-md-12">#}
+{#                                        <h1 class="h3 text-mouse"><span class="text-danger">สิ่งที่ไม่ชอบ</span> 1.การเดินทางไกล 2.การตื่นเช้า 3.การออกแบบให้สวยงาม</h1>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+
 
 {% endblock %}

@@ -1,74 +1,158 @@
-{% extends 'master/base.html' %}
-{% load static %}
-{% block body %}
+    {% extends 'master/base.html' %}
+    {% load static %}
+    {% block body %}
         <style>
-            a:link{
-                text-decoration: none;
+            h3{
+                font-size: 1.45rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
+
         </style>
-        <!-- Content Row -->
         <div class="row">
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-12 col-md-6">
-                <div class="card mx-3 mt-3">
-                     <div class="card-header bg-primary">
-                         <div class="row">
-                             <div class="col-md-8">
-                             <h1 class="h3 mb-0 text-white">สินค้าที่นำเสนอขาย (Products Offered For Sale)</h1>
-                             </div>
-                             <div class="col-md-4 ">
-                                 <a class="text-white btn btn-danger float-right" href="{% url 'Home'%}" >
-                                     <i class="fas fa-arrow-circle-left mx-1">
-                                     </i>
-                                     กลับหน้าหลัก
-                                </a>
-                             </div>
-                         </div>
-                        </div>
-                    <div class="card-body">
-                        <div class="row text-dark text-center">
-                            <div class="col-4 ">
-                                <div class="card">
-                                    <img src="{% static "images/Products/PD1.jpg" %}" width="100%" >
-                                    <div class="card-body">
-                                        <h2 class="card-title">Prime Vandal Skin</h2>
-                                    </div>
+            <div class="col-md-12">
+                <div class="featured-games header-text">
+                    <div class="heading-section">
+                        <h4><em>สินค้าที่นำเสนอขาย</em> (Products Offered For Sale)</h4>
+                    </div>
+                    <div class="row text-center my-3">
+                        <div class="col-md-4">
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="{% static "images/Products/PD1.jpg" %}" width="100%" class="my-3">
                                 </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <img src="{% static "images/Products/PD2.jpg" %}" width="100%" >
-                                    <div class="card-body">
-                                        <h2 class="card-title">Spectrum Phantom Skin</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <img src="{% static "images/Products/PD3.jpg" %}" width="100%" >
-                                    <div class="card-body">
-                                        <h2 class="card-title">Glitchpop Bulldog Skin</h2>
+                                <div class="down-content text-start">
+                                    <h3 class="my-2">Prime Vandal Skin</h3>
+                                    <h3 class="my-2">1,775.00 THB</h3>
+                                    <div class="row">
+                                        <div class="col-md-12 d-grid">
+                                            <button class="btn btn-danger " onclick="carterror()">
+                                                <h5>
+                                                    <i class="fas fa-cart-shopping"></i>
+                                                </h5>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <hr class="sidebar-divider">
-                        <div class="row ">
-                            <div class="col-md-12">
-                                <a class="text-white btn btn-warning float-left" href="MyInterests" >
-                                        <i class="fas fa-arrow-circle-left mx-1 "></i>
-                                        <span>ย้อนกลับ</span>
-                                </a>
-                                <a class="text-white btn btn-warning float-right" href="MyRoleModel" >
-                                        <span>ถัดไป</span>
-                                        <i class="fas fa-arrow-circle-right mx-1"></i>
-                                </a>
+                        <div class="col-md-4">
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="{% static "images/Products/PD2.jpg" %}" width="100%" class="my-3">
+                                </div>
+                                <div class="down-content text-start">
+                                    <h3 class="my-2">Spectrum Phantom Skin</h3>
+                                    <h3 class="my-2">2,675.00 THB</h3>
+                                    <div class="row">
+                                        <div class="col-md-12 d-grid">
+                                            <button class="btn btn-danger " onclick="carterror()">
+                                                <h5>
+                                                    <i class="fas fa-cart-shopping"></i>
+                                                </h5>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="{% static "images/Products/PD3.jpg" %}" width="100%" class="my-3">
+                                </div>
+                                <div class="down-content text-start">
+                                    <h3 class="my-2">Glitchpop Bulldog Skin</h3>
+                                    <h3 class="my-2">2,175.00 THB</h3>
+                                    <div class="row">
+                                        <div class="col-md-12 d-grid">
+                                            <button class="btn btn-danger " onclick="carterror()">
+                                                <h5>
+                                                    <i class="fas fa-cart-shopping"></i>
+                                                </h5>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
+                    <div class="row text-center my-3">
+                        <div class="col-md-4">
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="{% static "images/Products/PD4.jpg" %}" width="100%" class="my-3">
+                                </div>
+                                <div class="down-content text-start">
+                                    <h3 class="my-2">Gltichpop Vandal</h3>
+                                    <h3 class="my-2">2,175.00 THB</h3>
+                                    <div class="row">
+                                        <div class="col-md-12 d-grid">
+                                            <button class="btn btn-danger " onclick="carterror()">
+                                                <h5>
+                                                    <i class="fas fa-cart-shopping"></i>
+                                                </h5>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="{% static "images/Products/PD5.jpg" %}" width="100%" class="my-3">
+                                </div>
+                                <div class="down-content text-start">
+                                    <h3 class="my-2">Ruination Phantom</h3>
+                                    <h3 class="my-2">2,175.00 THB</h3>
+                                    <div class="row">
+                                        <div class="col-md-12 d-grid">
+                                            <button class="btn btn-danger " onclick="carterror()">
+                                                <h5>
+                                                    <i class="fas fa-cart-shopping"></i>
+                                                </h5>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="item">
+                                <div class="thumb">
+                                    <img src="{% static "images/Products/PD6.jpg" %}" width="100%" class="my-3">
+                                </div>
+                                <div class="down-content text-start">
+                                    <h3 class="my-2">Orange Ruination Vandal</h3>
+                                    <h3 class="my-2">4,550.00 THB</h3>
+                                    <div class="row">
+                                        <div class="col-md-12 d-grid">
+                                            <button class="btn btn-danger " onclick="carterror()">
+                                                <h5>
+                                                    <i class="fas fa-cart-shopping"></i>
+                                                </h5>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+    {% endblock %}
+{% block java %}
+    <script>
+        function carterror(){
+            Swal.fire({
+              icon: 'warning',
+              title: 'สินค้าหมด!',
+              text: 'ขออภัยในความไม่สะดวก',
+            })
+        }
+    </script>
 {% endblock %}

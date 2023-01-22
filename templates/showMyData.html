@@ -4,132 +4,127 @@
 {% block body %}
     <!-- Content Row -->
     <div class="row">
-        <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-12 col-md-6">
-            <div class="card mx-3 mt-3">
-                <div class="card-header bg-primary">
+            <div class="col-md-12">
+                <div class="featured-games header-text">
+                    <div class="heading-section text-center">
+                        <h4><em>ข้อมูลส่วนตัว</em></h4>
+                    </div>
                     <div class="row">
-                        <div class="col-md-8">
-                            <h1 class="h3 mb-0 text-white">แสดงข้อมูลที่ส่งมาจาก View</h1>
-                        </div>
-                        <div class="col-md-4 ">
-                            <a class="text-white btn btn-danger float-right" href="{% url 'Home' %}">
-                                <i class="fas fa-arrow-circle-left mx-1">
-                                </i>
-                                กลับหน้าหลัก
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card">
-                        <div class="card-header text-white bg-danger">
-                            <h4>ข้อมูลส่วนตัว</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row ">
-                                <div class="col-md-12 text-dark">
-                                    <div class="row ">
-                                        <div class="col-md-5">
-                                            <h1 class="h3 text-mouse">
-                                                <span class="text-danger">รหัสประจำตัว:</span> {{ IdNumber }}</h1>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <h1 class="h3 text-mouse">
-                                                <span class="text-danger">ชื่อ-นามสกุล</span> {{ fullName }}
-                                            </h1>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <h1 class="h3 text-mouse">
-                                                <span class="text-danger">เพศ</span> {{ sex }}
-                                            </h1>
-                                        </div>
-                                    </div>
-                                    <div class="row my-2">
-                                        <div class="col-md-5">
-                                            <h1 class="h3 text-mouse">
-                                                <span class="text-danger">วันที่เกิด:</span> {{ birthday }}</h1>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <h1 class="h3 text-mouse">
-                                                <span class="text-danger">อายุ</span> {{ age }}
-                                            </h1>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <h1 class="h3 text-mouse">
-                                                <span class="text-danger">กรุ๊ปเลือด</span> {{ bloodType }}
-                                            </h1>
-                                        </div>
-                                    </div>
-                                    <div class="row my-2">
-                                        <div class="col-md-5">
-                                            <h1 class="h3 text-mouse"><span class="text-danger">สื่งที่ชอบ</span>
-                                                {{ like }} </h1>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <h1 class="h3 text-mouse"><span class="text-danger">สิ่งที่เกลียด</span>
-                                                {{ hate }} </h1>
-                                        </div>
-                                    </div>
-                                    <div class="row my-2">
-                                        <div class="col-md-5">
-                                            <h1 class="h3 text-mouse">
-                                                <span class="text-danger">อาชีพปัจจุบัน</span> {{ status }}
-                                            </h1>
-                                        </div>
-                                        <div class="col-md-5">
-                                            <h1 class="h3 text-mouse">
-                                                <span class="text-danger">อาชีพในอนาคต</span> {{ futurecareer }}
-                                            </h1>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-12">
+                            <div class="row my-2">
+                                <div class="col-md-5">
+                                    <h1 class="h3 ">
+                                        <span class="text-danger">รหัสประจำตัว:</span> {{ IdNumber }}</h1>
+                                    </h1>
+                                </div>
+                                <div class="col-md-5">
+                                    <h1 class="h3 "><span class="text-danger">ชื่อ-นามสกุล</span> {{ fullName }}</h1>
+                                </div>
+                                <div class="col-md-2">
+                                    <h1 class="h3 "><span class="text-danger">เพศ</span> {{ sex }}</h1>
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col-md-5">
+                                    <h1 class="h3 ">
+                                        <span class="text-danger">วันที่เกิด:</span> {{ birthday }}</h1>
+                                    </h1>
+                                </div>
+                                <div class="col-md-5">
+                                    <h1 class="h3 ">
+                                        <span class="text-danger">อายุ</span> {{ age }}</h1>
+                                    </h1>
+                                </div>
+                                <div class="col-md-2">
+                                    <h1 class="h3 ">
+                                        <span class="text-danger">กรุ๊ปเลือด</span> {{ bloodType }}</h1>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col-md-5">
+                                    <h1 class="h3 ">
+                                        <span class="text-danger">สื่งที่ชอบ</span>{{ like }}
+                                    </h1>
+                                </div>
+                                <div class="col-md-5">
+                                    <h1 class="h3 ">
+                                       <span class="text-danger">สิ่งที่เกลียด</span>{{ hate }}
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col-md-5">
+                                    <h1 class="h3 ">
+                                        <span class="text-danger">อาชีพปัจจุบัน</span>{{ status }}
+                                    </h1>
+                                </div>
+                                <div class="col-md-5">
+                                    <h1 class="h3 ">
+                                       <span class="text-danger">อาชีพในอนาคต</span>{{ futurecareer }}
+                                    </h1>
                                 </div>
                             </div>
                         </div>
-                        <hr class="sidebar-divider">
-                        <div class="card-header text-white bg-danger">
-                            <h4>ข้อมูลสินค้า</h4>
-                        </div>
-                        <div class="row ">
-                                <div class="col-md-12 ">
-                                    <table class="table table-bordered table-hover ">
-                                        <thead class="text-center text-white bg-primary" style="font-size: 20px">
-                                            <tr>
-                                                <th width="30%">สินค้า</th>
-                                                <th width="20%">ราคา</th>
-                                                <th width="50%">รูปภาพ</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-dark text-center">
-                                        {% for product in myproduct %}
-
-                                            <tr>
-                                                <td><h4>{{ product.0 }}</h4></td>
-                                                <td><h4>{{ product.1|floatformat:2|intcomma }}</h4></td>
-                                                <td >
-                                                    <img src="{% static  product.2 %}" width="50%">
-                                                </td>
-                                            </tr>
-                                        {% endfor %}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
                     </div>
+                </div>
+                <div class="featured-games header-text my-2">
+                    <div class="heading-section text-center">
+                        <h4><em>ข้อมูลสินค้า</em></h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table class="table table-bordered table-hover ">
+                                <thead class="text-center text-white bg-primary" style="font-size: 20px">
+                                    <tr>
+                                        <th width="30%">สินค้า</th>
+                                        <th width="20%">ราคา</th>
+                                        <th width="50%">รูปภาพ</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-dark text-center">
+                                {% for product in myproduct %}
 
-                    <hr class="sidebar-divider">
-                    <div class="row ">
-                        <div class="col-md-12">
-                            <a class="text-white btn btn-warning float-left" href="MyProducts">
-                                <i class="fas fa-arrow-circle-left mx-1 "></i>
-                                <span>ย้อนกลับ</span>
-                            </a>
+                                    <tr>
+                                        <td><h4>{{ product.0 }}</h4></td>
+                                        <td><h4>{{ product.1|floatformat:2|intcomma }}</h4></td>
+                                        <td >
+                                            <img src="{% static  product.2 %}" width="30%">
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
+
+{#                        <hr class="sidebar-divider">#}
+{#                        <div class="card-header text-white bg-danger">#}
+{#                            <h4>ข้อมูลสินค้า</h4>#}
+{#                        </div>#}
+{#                        <div class="row ">#}
+{#                                <div class="col-md-12 ">#}
+
+{#                                </div>#}
+{#                            </div>#}
+{#                    </div>#}
+{##}
+{#                    <hr class="sidebar-divider">#}
+{#                    <div class="row ">#}
+{#                        <div class="col-md-12">#}
+{#                            <a class="text-white btn btn-warning float-left" href="MyProducts">#}
+{#                                <i class="fas fa-arrow-circle-left mx-1 "></i>#}
+{#                                <span>ย้อนกลับ</span>#}
+{#                            </a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
 {% endblock %}

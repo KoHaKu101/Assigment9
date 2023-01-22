@@ -1,28 +1,19 @@
 {% extends 'master/base.html' %}
 {% load static %}
 {% block body %}
-        <style>
-            a:link{
-                text-decoration: none;
-            }
-            a.btn{
-                font-size: 23px;
-            }
-        </style>
-        <!-- Content Row -->
-        <div class="row">
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-12 col-md-6">
-                <div class="card mx-3 mt-3">
-                     <div class="card-header bg-primary">
-                            <h1 class="h3 mb-0 text-white">หน้าหลัก (Home page)</h1>
-                        </div>
-                    <div class="card-body">
-                        <h1 class="text-center mb-5">ยินดีต้อนรับ</h1>
-                    </div>
 
+    <div class="main-banner">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="header-text">
+                    <h6>Welcome To Valorant Skin Shop</h6>
+                    <h4><em>ค้นหา</em> สกิลที่คุณสนใจ</h4>
+                    <div class="main-button">
+                        <a href="{% url 'MyProducts' %}">ค้นหาตอนนี้</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
 {% endblock %}

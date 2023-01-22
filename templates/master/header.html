@@ -1,28 +1,64 @@
 {% load static %}
-<nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
-    <!-- Sidebar Toggle (Topbar) -->
-    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-        <i class="fa fa-bars"></i>
-    </button>
+{% url 'Home' as home_url %}
+{% url 'MyProducts' as product_url %}
+{% url 'MyEducation' as education_url %}
+{% url 'MyInterests' as interests_url %}
+{% url 'MyRoleModel' as rolemodel_url %}
+{% url 'MyHistory' as history_url %}
+{% url 'ShowMyData' as showmydata_url %}
 
-    <!-- Topbar Navbar -->
-    <ul class="navbar-nav ml-auto">
-        <!-- Nav Item - User Information -->
-        <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Pichitchai</span>
-                <img class="img-profile rounded-circle"
-                    src="{% static 'images/undraw_profile.svg' %}">
-            </a>
-            <!-- Dropdown - User Information -->
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="MyHistory">
-                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                    Profile
-                </a>
+
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <a href="{{ home_url }}" class="logo">
+                        <img src="{% static 'images/logo.png' %}" width="50%">
+                    </a>
+                    <ul class="nav">
+                        <li>
+                            <a href="{{ home_url }}"
+                               {% if request.get_full_path == home_url %}class="active"{% endif %}>หน้าหลัก
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ product_url }}"
+                               {% if request.get_full_path == product_url %}class="active"{% endif %}>สินค้า
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ education_url }}"
+                               {% if request.get_full_path == education_url %}class="active"{% endif %}>ประวัติการศึกษา
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ interests_url }}"
+                               {% if request.get_full_path == interests_url %}class="active"{% endif %}>สิ่งที่สนใจ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ rolemodel_url }}"
+                               {% if request.get_full_path == rolemodel_url %}class="active"{% endif %}>บุคคลต้นแบบ
+                            </a>
+                        </li>
+                    <li>
+                            <a href="{{ showmydata_url }}"
+                               {% if request.get_full_path == showmydata_url %}class="active"{% endif %}>showmydata
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ history_url }}"
+                               {% if request.get_full_path == history_url %}class="active"{% endif %}>ข้อมูลส่วนตัว
+                                <img src="{% static 'assets/images/profile-header.jpg' %}" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                </nav>
             </div>
-        </li>
-    </ul>
-</nav>
+        </div>
+    </div>
+</header>

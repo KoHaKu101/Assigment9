@@ -1,69 +1,34 @@
 {% extends 'master/base.html' %}
 {% load static %}
 {% block body %}
-        <style>
-            a:link{
-                text-decoration: none;
-            }
-        </style>
-        <!-- Content Row -->
+    <div class="game-details header-text">
         <div class="row">
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-12 col-md-6">
-                <div class="card mx-3 mt-3">
-                     <div class="card-header bg-primary">
-                         <div class="row">
-                             <div class="col-md-8">
-                             <h1 class="h3 mb-0 text-white">ประวัติการศึกษา (Education)</h1>
-                             </div>
-                             <div class="col-md-4 ">
-                                 <a class="text-white btn btn-danger float-right" href="{% url 'Home'%}" >
-                                     <i class="fas fa-arrow-circle-left mx-1">
-                                     </i>
-                                     กลับหน้าหลัก
-                                </a>
-                             </div>
-                         </div>
+            <div class="col-lg-12">
+                <h2>ประวัติการศึกษา</h2>
+            </div>
+            <div class="col-lg-12">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="{% static 'images/Education/School1.jpg' %}" alt=""
+                                 style="border-radius: 23px; margin-bottom: 30px;">
                         </div>
-                    <div class="card-body">
-                        <div class="row ">
-                            <div class="col-md-4">
-                                <img src="{% static "images/Education/School1.png" %}" width="100%">
-                            </div>
-                            <div class="col-md-8 text-dark text-center">
-                                <h1 class="h4 text-mouse"> จบการศึกษา ชั้นประธม และมัธยมต้น ที่โรงเรียนเมืองร้อยเอ็ด</h1>
-
-
-                            </div>
+                        <div class="col-lg-8 text-center">
+                            <h5>จบการศึกษา ชั้นประธม และมัธยมต้น ที่โรงเรียนเมืองร้อยเอ็ด</h5>
                         </div>
-                        <hr class="sidebar-divider">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="{% static "images/Education/School2.png" %}" width="100%" >
-                            </div>
-                            <div class="col-md-8 text-dark text-center">
-                                <h1 class="h4 text-mouse"> จบการศึกษาระดับ ประกาศณียบัตรวิชาชีพ และประกาศณียบัตรวิชาชีพชั้นสูง </h1>
-                                <h1 class="h4 text-mouse"> ที่วิทยาลัยเทคนิคร้อยเอ็ด </h1>
+                        <div class="col-lg-8 text-center">
+                            <h5>จบการศึกษาระดับ ประกาศณียบัตรวิชาชีพ และประกาศณียบัตรวิชาชีพชั้นสูง
+                                ที่วิทยาลัยเทคนิคร้อยเอ็ด
+                            </h5>
 
-                            </div>
                         </div>
-                        <hr class="sidebar-divider">
-                        <div class="row ">
-                            <div class="col-md-12">
-                                <a class="text-white btn btn-warning float-left" href="MyHistory" >
-                                        <i class="fas fa-arrow-circle-left mx-1 "></i>
-                                        <span>ย้อนกลับ</span>
-                                </a>
-                                <a class="text-white btn btn-warning float-right" href="MyInterests" >
-                                        <span>ถัดไป</span>
-                                        <i class="fas fa-arrow-circle-right mx-1"></i>
-                                </a>
-                            </div>
+                        <div class="col-lg-4">
+                            <img src="{% static 'images/Education/School2.jpg' %}" alt=""
+                                 style="border-radius: 23px; margin-bottom: 30px;">
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-
+    </div>
 {% endblock %}
