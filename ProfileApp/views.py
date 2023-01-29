@@ -1,6 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,HttpResponse
 
 # Create your views here.
+from ProfileApp.form import ProductForm
+from ProfileApp.models import Product
+
+
 def home(request):
     return render(request,'home.html')
 def MyHistory(request):
@@ -40,3 +44,29 @@ def showMyData(request):
               'bloodType': bloodType, 'like': like, 'hate': hate, 'status': status, 'futurecareer': futurecareer,
               'myproduct':myproduct}
     return  render(request,'showMyData.html',mydata)
+
+lstOurProduct = []
+def listProduct(requset):
+    context = {'products':lstOurProduct}
+    return render(requset,"listProduct.html",context)
+def inputProduct(requset) :
+    if requset.method == "POST":
+        form = ProductForm(requset.POST)
+        if form.is_valid() :
+            form = form.cleaned_data
+            pdNumber = form.get('pdNumber')
+            pdName = form.get('pdName')
+            pdPrice = float(form.get('pdPrice'))
+            pdProfit = form.get('pdProfit')
+            pdAmount = form.get('pdAmount')
+            pdVat = form.get('pdVat')
+            product= Product(pdNumber,pdName,pdPrice,pdProfit,pdAmount,pdVat)
+            lstOurProduct.append(product)
+            return redirect('listProduct')
+
+        else:
+            form =ProductForm(form)
+    else:
+        form =ProductForm()
+    context = {'form':form,"CHECK":requset.method}
+    return render(requset,'inputProduct.html',context)

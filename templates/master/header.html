@@ -6,6 +6,8 @@
 {% url 'MyRoleModel' as rolemodel_url %}
 {% url 'MyHistory' as history_url %}
 {% url 'ShowMyData' as showmydata_url %}
+{% url 'inputProduct' as inputProduct_url %}
+{% url 'listProduct' as listProduct %}
 {#{% with 'home_url,product_url'|make_list as list %}#}
 
 <header class="header-area header-sticky">
@@ -68,8 +70,13 @@
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="Assigment11">
                                 <li>
-                                    <a href="{{ showmydata_url }}"
-                                       {% if request.get_full_path == showmydata_url %}class="active"{% endif %}>showmydata
+                                    <a href="{{ inputProduct_url }}"
+                                       {% if request.get_full_path == inputProduct_url %}class="active"{% endif %}>inputProduct
+                                    </a>
+                                </li>
+                            <li>
+                                    <a href="{{ listProduct }}"
+                                       {% if request.get_full_path == listProduct %}class="active"{% endif %}>listProduct
                                     </a>
                                 </li>
                             </ul>

@@ -1,0 +1,66 @@
+
+{% extends 'master/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block body %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="featured-games header-text">
+            <div class="heading-section">
+                <h4><em>เพิ่มสินค้า</em> (Products Input Form)</h4>
+            </div>
+            <div class="row my-4">
+                <div class="col-md-12">
+                    <h5>ผู้จัดทำ : นายพิชิตชัย ธรรมชัย 147-4</h5>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-md-12">
+                    <table class="table table-hover  table-bordered">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th>รหัสสินค้า</th>
+                                <th>ชื่อสินค้า</th>
+                                <th>ราคาต่อหน่วย</th>
+                                <th>กำไรที่ต้องการ</th>
+                                <th>จำนวน</th>
+                                <th>ภาษี</th>
+                                <th>ราคาที่ได้กำไร</th>
+                                <th>เงินที่ได้ถ้าขายหมด</th>
+                                <th>ภาษี</th>
+                                <th>ราคาขายจริง</th>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color: #3dd5f3">
+                            {% for product in products%}
+                            <tr>
+                                <td>{{ product.pdNumber }}</td>
+                                <td>{{ product.pdName }}</td>
+                                <td>{{ product.pdPrice }}</td>
+                                <td>{{ product.pdProfit }} %</td>
+                                <td>{{ product.pdAmount }}</td>
+                                <td>{{ product.pdVat }} %</td>
+                                <td>{{ product.pdSaleProfit|floatformat:2|intcomma }}</td>
+                                <td>{{ product.saleTotal|floatformat:2|intcomma }}</td>
+                                <td>{{ product.taxPrice|floatformat:2|intcomma }}</td>
+                                <td>{{ product.salePrice|floatformat:2|intcomma }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-md-12">
+                    <a href="{% url 'inputProduct' %}" class="btn btn-success float-end">
+                        <i class="fas fa-plus"></i>
+                        เพิ่มสินค้า
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+{% endblock %}
+</body>
+</html>

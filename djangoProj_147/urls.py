@@ -25,5 +25,8 @@ urlpatterns = [
     path('MyProducts', views.MyProducts, name="MyProducts"),
     path('MyRoleModel', views.MyRoleModel, name="MyRoleModel"),
     path('ShowMyData', views.showMyData, name="ShowMyData"),
+    path('inputProduct', views.inputProduct, name="inputProduct"),
+    path('listProduct', views.listProduct, name="listProduct"),
+
 
 ]
