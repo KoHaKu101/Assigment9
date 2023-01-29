@@ -38,7 +38,7 @@
 	$('.filters ul li').click(function(){
         $('.filters ul li').removeClass('active');
         $(this).addClass('active');
-          
+
           var data = $(this).attr('data-filter');
           $grid.isotope({
             filter: data
@@ -179,7 +179,6 @@
 
 	$(document).ready(function () {
 	    $(document).on("scroll", onScroll);
-	    
 	    //smoothscroll
 	    $('.scroll-to-section a[href^="#"]').on('click', function (e) {
 	        e.preventDefault();

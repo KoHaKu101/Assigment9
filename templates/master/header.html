@@ -6,7 +6,7 @@
 {% url 'MyRoleModel' as rolemodel_url %}
 {% url 'MyHistory' as history_url %}
 {% url 'ShowMyData' as showmydata_url %}
-
+{#{% with 'home_url,product_url'|make_list as list %}#}
 
 <header class="header-area header-sticky">
     <div class="container">
@@ -22,31 +22,58 @@
                                {% if request.get_full_path == home_url %}class="active"{% endif %}>หน้าหลัก
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ product_url }}"
-                               {% if request.get_full_path == product_url %}class="active"{% endif %}>สินค้า
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ education_url }}"
-                               {% if request.get_full_path == education_url %}class="active"{% endif %}>ประวัติการศึกษา
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ interests_url }}"
-                               {% if request.get_full_path == interests_url %}class="active"{% endif %}>สิ่งที่สนใจ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ rolemodel_url }}"
-                               {% if request.get_full_path == rolemodel_url %}class="active"{% endif %}>บุคคลต้นแบบ
-                            </a>
-                        </li>
-                    <li>
-                            <a href="{{ showmydata_url }}"
-                               {% if request.get_full_path == showmydata_url %}class="active"{% endif %}>showmydata
-                            </a>
-                        </li>
+                        <div class="dropdown">
+                            <button class="btn btn-dropdown dropdown-toggle" type="button" id="Assigment9"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Assigment9
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="Assigment9">
+                                <li>
+                                    <a href="{{ product_url }}" class="dropdown-item"
+                                       {% if request.get_full_path == product_url %}class="active"{% endif %}>สินค้า
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ education_url }}" class="dropdown-item"
+                                       {% if request.get_full_path == education_url %}class="active"{% endif %}>ประวัติการศึกษา
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ interests_url }}" class="dropdown-item"
+                                       {% if request.get_full_path == interests_url %}class="active"{% endif %}>สิ่งที่สนใจ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ rolemodel_url }}"
+                                       class="dropdown-item {% if request.get_full_path == rolemodel_url %} active {% endif %}">
+                                        บุคคลต้นแบบ
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-dropdown dropdown-toggle" type="button" id="Assigment10"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Assigment10
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="Assigment10">
+                                <li>
+                                    <a href="{{ showmydata_url }}"
+                                       {% if request.get_full_path == showmydata_url %}class="active"{% endif %}>showmydata
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-dropdown dropdown-toggle" type="button" id="Assigment11"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Assigment11
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="Assigment11">
+                                <li>
+                                    <a href="{{ showmydata_url }}"
+                                       {% if request.get_full_path == showmydata_url %}class="active"{% endif %}>showmydata
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                         <li>
                             <a href="{{ history_url }}"
                                {% if request.get_full_path == history_url %}class="active"{% endif %}>ข้อมูลส่วนตัว
@@ -62,3 +89,4 @@
         </div>
     </div>
 </header>
+{#{% endwith %}#}
