@@ -1,0 +1,45 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="featured-games header-text">
+                <div class="heading-section">
+                    <h4><em>ลูกค้า</em> {{ customer.name }}</h4>
+                </div>
+                    <div class="row">
+                         <div class="col-md-12 my-3">
+                            <h3>รหัสลูกค้า : {{ customer.cid }} </h3>
+                        </div>
+                        <div class="col-md-5 my-3">
+                            <h3>ชื่อ : {{ customer.name }} </h3>
+                        </div>
+                        <div class="col-md-5 my-3">
+                            <h3>นามสกุล : {{ customer.surname }} </h3>
+                        </div>
+
+                        <div class="col-md-12 my-3">
+                            <h3>เบอร์โทร : {{ customer.telephone }} </h3>
+                        </div>
+                        <div class="col-md-5 my-3">
+                            <h3>เพศ : {{ customer.gender }} </h3>
+                        </div>
+                        <div class="col-md-5 my-3">
+                            <h3>อาชีพ : {{ customer.carreer }} </h3>
+                        </div>
+                        <div class="col-md-12 my-3">
+                            <h3>ที่อยู่ : {{ customer.address }} </h3>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-info" onclick="history.back()" type="button">
+                                <i class="fas fa-arrow-alt-circle-left mx-2"></i>Back
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

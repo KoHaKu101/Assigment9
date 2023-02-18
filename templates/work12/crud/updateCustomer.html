@@ -1,0 +1,27 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="featured-games header-text">
+            <div class="heading-section">
+                <h4><em>แก้ไขข้อมูลลูกค้า</em></h4>
+            </div>
+            <form action="{% url 'updateCustomer' cid %}" method="POST" class="form-control">
+                {% csrf_token %}
+                <div class="row  my-3">
+                    <div class="col-md-12">
+                       {{ form.as_div }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-success" type="submit"><i class="fas fa-save"></i> Submit</button>
+                        <button class="btn btn-danger" type="reset"><i class="fas fa-eraser"></i> Clear</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        </div>
+{% endblock %}

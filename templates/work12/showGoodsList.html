@@ -1,0 +1,66 @@
+
+{% extends 'master/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block body %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="featured-games header-text">
+            <div class="heading-section">
+                <h4><em>แสดงรายการสินค้าทั้งหมด</em> (Show Goods List)</h4>
+            </div>
+            <div class="row my-4">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead class="bg-primary text-white text-center">
+                            <tr>
+                                <th>รหัสสินค้า</th>
+                                <th>ชื่อสินค้า</th>
+                                <th>ยี่ห้อ</th>
+                                <th>รุ่น</th>
+                                <th>ราคา</th>
+                                <th>จำนวน</th>
+                                <th>ประเภท</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-white" style="font-size: 20px">
+                            {% for good in goods%}
+                            <tr>
+                                <td>{{ good.gid }}</td>
+                                <td>{{ good.name }}</td>
+                                <td>{{ good.brand }}</td>
+                                <td>{{ good.model }}</td>
+                                <td>{{ good.price|intcomma }}</td>
+                                <td>{{ good.net|intcomma }}</td>
+                                <td>{{ good.goodscategory.gc_name }}</td>
+                                <td class="text-center">
+                                    <a href="{% url 'showGoodsOne' good.gid %}" class="btn btn-primary ">
+                                        <i class="fas fa-eye"></i>
+                                    </a>
+                                    <a href="{% url 'updateGood' good.gid %}" class="btn btn-warning mx-2">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a href="{% url 'deleteGood' good.gid %}" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row my-4">
+                <div class="col-md-12">
+                    <a href="{% url 'newGoods' %}" class="btn btn-success float-end">
+                        <i class="fas fa-plus"></i>
+                        เพิ่มสินค้า
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+{% endblock %}

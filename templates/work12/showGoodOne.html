@@ -1,0 +1,36 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="featured-games header-text">
+                <div class="heading-section">
+                    <h4><em>สินค้า</em> {{ goods.name }}</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 my-3">
+                        <h3>ชื่อสินค้า : {{ goods.name }} </h3>
+                    </div>
+                    <div class="col-md-5 my-3">
+                        <h3>ยี่ห้อ : {{ goods.brand }} </h3>
+                    </div>
+                    <div class="col-md-5 my-3">
+                        <h3>รุ่น : {{ goods.model }} </h3>
+                    </div>
+                    <div class="col-md-5 my-3">
+                        <h3>ราคา : {{ goods.price }} </h3>
+                    </div><div class="col-md-5 my-3">
+                        <h3>จำนวนคงเหลือ : {{ goods.net }} </h3>
+                    </div>
+                    <div class="col-md-12 my-3">
+                        <h3>ประเภทสินค้า : {{ goods.goodscategory.gc_name }} </h3>
+                    </div>
+                    <div class="col-md-12 my-3">
+                        <h3>คุณสมบัติ : {{ goods.property }} </h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

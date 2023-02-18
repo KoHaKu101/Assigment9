@@ -8,6 +8,7 @@
 {% url 'ShowMyData' as showmydata_url %}
 {% url 'inputProduct' as inputProduct_url %}
 {% url 'listProduct' as listProduct %}
+{% url 'showGoodsList' as showGoodList_url %}{% url 'showCustomerList' as showCustomerList_url %}{% url 'newGoods' as newGoods_url %}
 {#{% with 'home_url,product_url'|make_list as list %}#}
 
 <header class="header-area header-sticky">
@@ -74,9 +75,26 @@
                                        {% if request.get_full_path == inputProduct_url %}class="active"{% endif %}>inputProduct
                                     </a>
                                 </li>
-                            <li>
+                                <li>
                                     <a href="{{ listProduct }}"
                                        {% if request.get_full_path == listProduct %}class="active"{% endif %}>listProduct
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-dropdown dropdown-toggle" type="button" id="Assigment12"
+                                    data-bs-toggle="dropdown" aria-expanded="false">Assigment12
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="Assigment12">
+                                <li>
+                                    <a href="{{ showGoodList_url }}"
+                                       {% if request.get_full_path == showGoodList_url %}class="active"{% endif %}>showGoodsList
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ showCustomerList_url }}"
+                                       {% if request.get_full_path == showCustomerList_url %}class="active"{% endif %}>showCustomerList
                                     </a>
                                 </li>
                             </ul>

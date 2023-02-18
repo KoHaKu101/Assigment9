@@ -1,0 +1,71 @@
+{% extends 'master/base.html' %}
+{% load static %}
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="featured-games header-text">
+                <div class="heading-section">
+                    <h4><em>ลบลูกค้า</em> {{ customer.name }}</h4>
+                </div>
+                <form action="{% url 'deleteCustomer' customer.cid %}" method="POST" id="FormDelete">
+                    {% csrf_token %}
+                    <div class="row">
+                         <div class="col-md-12 my-3">
+                            <h3>รหัสลูกค้า : {{ customer.cid }} </h3>
+                        </div>
+                        <div class="col-md-5 my-3">
+                            <h3>ชื่อ : {{ customer.name }} </h3>
+                        </div>
+                        <div class="col-md-5 my-3">
+                            <h3>นามสกุล : {{ customer.surname }} </h3>
+                        </div>
+
+                        <div class="col-md-12 my-3">
+                            <h3>เบอร์โทร : {{ customer.telephone }} </h3>
+                        </div>
+                        <div class="col-md-5 my-3">
+                            <h3>เพศ : {{ customer.gender }} </h3>
+                        </div>
+                        <div class="col-md-5 my-3">
+                            <h3>อาชีพ : {{ customer.carreer }} </h3>
+                        </div>
+                        <div class="col-md-12 my-3">
+                            <h3>ที่อยู่ : {{ customer.address }} </h3>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <button class="btn btn-info" onclick="history.back()" type="button">
+                                <i class="fas fa-arrow-alt-circle-left mx-2"></i>Back
+                            </button>
+                            <button class="btn btn-danger float-end" onclick="deleteConfirm()" type="button">
+                                <i class="fas fa-trash mx-2"></i>Delete
+                            </button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block java %}
+    <script>
+        function deleteConfirm() {
+            Swal.fire({
+                title: 'คุณต้องการจะลบจริงมั้ย?',
+                showDenyButton: true,
+                confirmButtonText: 'ลบ',
+                denyButtonText: `ยกเลิก`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $('#FormDelete').submit();
+                } else if (result.isDenied) {
+                    Swal.fire('ยกเลิกสำเร็จ', 'info')
+                }
+            })
+        }
+    </script>
+{% endblock %}
