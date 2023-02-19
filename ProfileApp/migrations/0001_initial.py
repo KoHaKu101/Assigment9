@@ -70,4 +70,5 @@ class Migration(migrations.Migration):
             name='goodscategory',
             field=models.ForeignKey(default=None, on_delete=django.db.models.deletion.CASCADE, to='ProfileApp.goodscategory'),
         ),
+
     ]

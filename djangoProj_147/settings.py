@@ -78,21 +78,21 @@ WSGI_APPLICATION = 'djangoProj_147.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'work12',
-    #     'USER':'userWork12',
-    #     'PASSWORD':'ZxcV5678',
-    #     'HOST':'localhost',
-    #     'PORT':3306,
-    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'KoHaKu101$work12',
-        'USER':'KoHaKu101',
+        'NAME': 'work12',
+        'USER':'userWork12',
         'PASSWORD':'ZxcV5678',
-        'HOST':'KoHaKu101.mysql.pythonanywhere-services.com',
+        'HOST':'localhost',
         'PORT':3306,
+    # }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'KoHaKu101$work12',
+    #     'USER':'KoHaKu101',
+    #     'PASSWORD':'ZxcV5678',
+    #     'HOST':'KoHaKu101.mysql.pythonanywhere-services.com',
+    #     'PORT':3306,
     }
 }
 
