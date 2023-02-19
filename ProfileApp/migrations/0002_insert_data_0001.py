@@ -7,7 +7,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('shoppingapp', '0001_initial'),
+        ('ProfileApp', '0001_initial'),
     ]
     operations = [
         migrations.RunSQL("INSERT INTO profileapp_goodscategory VALUES " \
